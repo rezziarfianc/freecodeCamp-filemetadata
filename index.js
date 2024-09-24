@@ -18,7 +18,7 @@ app.post('/api/fileanalyse',upload.single('upfile'), function(req, res) {
   let fileMeta = {};
   if (req.file) {
     fileMeta = {
-      name : req.file.filename,
+      name : req.file.originalname,
       type : req.file.mimetype,
       size : req.file.size,
     }
